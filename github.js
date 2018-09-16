@@ -6,18 +6,20 @@ class GitHub {
     this.repos_sort = "created: asc";
   }
 
+  //added
+
   async getUser(user) {
     const profileResponse = await fetch(
       `https://api.github.com/users/${user}?client_id=${
-        this.client_id
+      this.client_id
       }&client_secret=${this.client_secret}`
     );
 
     const repoResponse = await fetch(
       `https://api.github.com/users/${user}/repos?per_page=${
-        this.repos_count
+      this.repos_count
       }&sort=${this.repos_count_sort}&client_id=${
-        this.client_id
+      this.client_id
       }&client_secret=${this.client_secret}`
     );
 
